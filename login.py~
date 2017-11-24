@@ -18,26 +18,29 @@ def browse_credentials(table_name):
 def login():
     table_name="credentials"
     username = raw_input("username :")
-    password = getpass.getpass("password :")
+
     data = browse_credentials(table_name)
     #print data
     for i in data:
         if username==i[0]:
+	  for j in range(3):
+            password = getpass.getpass("password :")
             if password ==i[1]:
                 print"Login successful"
                 return 1
                 break
             else:
-                print"Incorrect password"
-                return 0
-                break
+               print"Incorrect password, please try again"
+          else:
+             print "user exceeded 3 attempts, please try later"
+             return 0
     else:
         print"Invalid Username"
         return 0
 
     
 if __name__=="__main__":
-     data = browse_credentials("credentials")
-     print data
-    #login_status = login()
-    #print login_status
+     #data = browse_credentials("credentials")
+     #print data
+    login_status = login()
+    print login_status
