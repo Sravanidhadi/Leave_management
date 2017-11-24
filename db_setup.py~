@@ -14,7 +14,7 @@ def create_table():
 	query3="create table leave_balances (emp_id varchar,casual_leaves int,sick_leaves int)"
 	query4="create table leave_details (emp_id varchar, date date,type_of_leave varchar)"
 	query5="create table total_leaves (type_of_leave varchar,leave_id int,days int)" 
-        con,cur=get_connection("leave_management.db")
+        con,cur=get_connection("leave_management1.db")
         cur.execute(query1)
         cur.execute(query2)
         cur.execute(query3)

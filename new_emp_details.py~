@@ -4,8 +4,7 @@ def insert_data(query1,query2):
         con, cur=db_setup.get_connection("leave_management.db")
         #for i in range(300):
         #q="insert into credentials values('nex0288','sravani288')"
-        cur.execute(query1)
-	cur.execute(query2)        
+        cur.execute(query1,query2)        
     except Exception as err:
         print err
     else:

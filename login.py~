@@ -37,7 +37,7 @@ def login():
 
     
 if __name__=="__main__":
-     data = browse_credentials("employee_details")
+     data = browse_credentials("credentials")
      print data
     #login_status = login()
     #print login_status
